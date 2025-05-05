@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Linktree-Seite von Mike Emenako, Geschäftsführer bei mib Management Institut Bochum GmbH">
+  <title>Mike Emenako Linktree</title>
+  <style>
+    body {
+      background: #f5f5f5;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    header img {
+      max-width: 200px;
+      height: auto;
+    }
+    .card-info {
+      margin-top: 10px;
+    }
+    .card-info .name {
+      font-size: 20px;
+      font-weight: bold;
+      color: #c0143c;
+      margin: 4px 0;
+    }
+    .card-info .details {
+      font-size: 14px;
+      color: #616265;
+      margin: 2px 0;
+    }
+    /* QR-Code Styling */
+    .qr-container {
+      margin-top: 16px;
+    }
+    .qr-container img {
+      width: 140px;
+      height: 140px;
+      border: 2px solid #616265;
+      border-radius: 8px;
+    }
+    main {
+      width: 100%;
+      max-width: 360px;
+    }
+    .links-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .links-list li {
+      margin: 10px 0;
+    }
+    .links-list a {
+      display: block;
+      padding: 12px;
+      text-decoration: none;
+      text-align: center;
+      font-size: 16px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .links-list a:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+    .main-link {
+      background: #ef8200;
+      color: #fff;
+      animation: pulse 3s infinite;
+    }
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+    .secondary-link {
+      background: #fff;
+      color: #00677f;
+      border: 2px solid #00677f;
+    }
+    .emoji {
+      margin-right: 8px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="https://www.mi-bochum.de/wp-content/uploads/2019/12/mib_logo_digital_darkbg_vec.svg" alt="mib Logo">
+    <div class="card-info">
+      <div class="name">Mike Emenako</div>
+      <div class="details">Geschäftsführer, mib Management Institut Bochum GmbH</div>
+    </div>
+    <!-- QR-Code mit QRserver API -->
+    <div class="qr-container">
+      <img
+        src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=http%3A%2F%2Fwww.linkedin.com%2Fin%2Fmikeemenako"
+        alt="QR-Code zu LinkedIn">
+    </div>
+  </header>
+  <main>
+    <ul class="links-list">
+      <li><a href="https://www.mi-bochum.de" class="main-link"><span class="emoji">🌐</span>mib Website</a></li>
+      <li><a href="https://www.mi-bochum.de/landing/ki-toolbox/" class="secondary-link"><span class="emoji">🤖</span>KI-Toolbox</a></li>
+      <li><a href="https://www.copiki.de/" class="secondary-link"><span class="emoji">🧠</span>Copiki Managementsystem</a></li>
+      <li><a href="https://www.mi-bochum.de/blog/" class="secondary-link"><span class="emoji">📝</span>Der mib Blog</a></li>
+      <li><a href="http://www.linkedin.com/in/mikeemenako" class="secondary-link"><span class="emoji">🔗</span>LinkedIn</a></li>
+      <li><a href="https://g.co/gemini/share/11281e07d3d7" class="secondary-link"><span class="emoji">📘</span>ISO 42001 Begriffe</a></li>
+    </ul>
+  </main>
+  <script>
+    // Öffne alle Links in neuem Tab
+    document.querySelectorAll('a').forEach(function(link) {
+      link.setAttribute('target', '_blank');
+    });
+  </script>
+</body>
+</html>
